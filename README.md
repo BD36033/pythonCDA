@@ -1,6 +1,6 @@
 # Projet Python - Apprentissage du Langage
 
-![Python Logo](https://www.python.org/community/logos/python-logo-master-v3-TM.png)
+![Python Logo](static/img/python-logo.png)
 
 ## Description
 
