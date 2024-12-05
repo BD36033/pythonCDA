@@ -1,6 +1,6 @@
 # Projet Python - Apprentissage du Langage
 
-![Python Logo](static/img/Python-logo.png)
+<img src="img/python-logo.png" alt="Python Logo" width="200"/>
 
 ## Description
 
@@ -18,7 +18,7 @@ Pour exécuter ce projet sur votre machine locale, suivez ces étapes :
 
 1. **Clonez le dépôt** :
    ```bash
-   git clone https://github.com/BD36033/pythonCDA
+   git clone https://github.com/BD36033/pythonCDA.git
    ```
 
 2. **Naviguez dans le répertoire du projet** :
@@ -34,3 +34,39 @@ Pour exécuter ce projet sur votre machine locale, suivez ces étapes :
 ## Utilisation
 
 Pour exécuter les scripts, utilisez la commande suivante dans votre terminal :
+
+```bash
+python nom_du_script.py
+```
+
+Remplacez `nom_du_script.py` par le nom du script que vous souhaitez exécuter.
+
+## Exercices
+
+Voici quelques exemples d'exercices inclus dans le projet :
+
+- **Exercice 1** : Calculer la somme de deux nombres.
+- **Exercice 2** : Calculer la multiplication de deux nombres.
+- **Exercice 3** : Calculer la soustraction de deux nombres.
+- **Exercice 4** : Afficher un message personnalisé.
+- **Exercice 5** : Calculer l'IMC (Indice de Masse Corporelle).
+
+## Tests
+
+Des tests sont également inclus pour vous aider à évaluer vos compétences. Exécutez les tests en utilisant la commande suivante :
+
+```bash
+python test.py
+```
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Si vous souhaitez ajouter des exercices ou améliorer le projet, n'hésitez pas à soumettre une pull request.
+
+## License
+
+Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus de détails.
+
+## Contact
+
+Pour toute question ou suggestion, vous pouvez me contacter à l'adresse suivante : [bryan.dessis@gmail.com](bryan.dessis@gmail.com)
