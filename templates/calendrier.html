@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Planning de Tâches</title>
+</head>
+<body>
+    {{ nav_bar|safe }}
+    <div class="container">
+        <h1>Planning de Tâches</h1>
+        <form method="POST">
+            <label for="date">Date :</label>
+            <input type="date" name="date" required>
+            
+            <label for="jour">Jour :</label>
+            <select name="jour" required>
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+            </select>
+            
+            <label for="tache">Tâche :</label>
+            <input type="text" name="tache" required>
+            <button type="submit">Ajouter Tâche</button>
+        </form>
+        
+        <h2>Tâches par Date :</h2>
+        <div class="task-summary">
+            {% for key, taches_list in taches.items() %}
+                <div class="task-item">
+                    <h3>{{ key }}</h3>  <!-- Affiche la date et le jour -->
+                    <ul>
+                        {% for tache in taches_list %}
+                            <li>{{ tache }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
