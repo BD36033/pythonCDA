@@ -1,6 +1,6 @@
 # Projet Python - Apprentissage du Langage
 
-![Python Logo](static/img/python-logo.png)
+![Python Logo](static/img/Python-logo.png)
 
 ## Description
 
