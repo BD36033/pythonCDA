@@ -1,6 +1,6 @@
 # Projet Python - Apprentissage du Langage
 
-<img src="img/python-logo.png" alt="Python Logo" width="200"/>
+<img src="/static/img/Python-logo.png" alt="Python Logo" width="200"/>
 
 ## Description
 
