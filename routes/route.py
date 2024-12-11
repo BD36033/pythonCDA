@@ -1,5 +1,6 @@
 from flask import Blueprint, request, render_template_string, render_template
 from test import afficher_exercice2, afficher_exercice3, afficher_exercice4, afficher_exercice5, afficher_exercice6, afficher_exercice7, soustraire, calculer_multiplication, contenu_page, calculer_somme, afficher_exercice1
+import requests
 # from ..calendrier import calendrier 
 # Définir un blueprint
 route = Blueprint('route', __name__)
@@ -14,6 +15,7 @@ def nav_bar():
             <li><a href="/test">Exercice</a></li>
             <li><a href="/cours">Cours</a></li>
             <li><a href="/calendrier">Calendrier</a></li>
+            <li><a href="/api-data">Liste produits</a></li>
         </ul>
     </nav>
     '''
@@ -227,6 +229,28 @@ def calendrier_view():
             taches[key] = [tache]  # Crée une nouvelle entrée avec la tâche
 
     return render_template('calendrier.html', taches=taches, nav_bar=nav_bar()) 
+
+
+
+
+@route.route('/api-data', methods=['GET'])
+def afficher_api_data():
+    # URL de l'API
+    api_url = "https://gourmandise-api.bdessis.v70208.campus-centre.fr/products"
+    
+    try:
+        # Envoyer une requête GET à l'API
+        response = requests.get(api_url)
+        response.raise_for_status()  # Lève une exception si le statut HTTP indique une erreur
+        data = response.json()  # Extraire les données JSON
+
+        # Passer les données à un template
+        return render_template('api_data.html', products=data, nav_bar=nav_bar)
+    except requests.exceptions.RequestException as e:
+        # En cas d'erreur, afficher un message
+        return f"Erreur lors de la récupération des données : {e}"
+
+
 
 
 if __name__ == '__main__':

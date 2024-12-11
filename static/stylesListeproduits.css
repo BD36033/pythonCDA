@@ -1,0 +1,52 @@
+@import url('styles.css');
+/* Styles spécifiques à la liste de produits */
+.produit-container h1 {
+    text-align: center;
+    color: #06c809;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.produit-liste {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produit-liste li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit-liste li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produit-liste li h2 {
+    font-size: 1.5rem;
+    color: #06c809;
+    margin: 10px 0;
+}
+
+.produit-liste li p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+.produit-image {
+    width: 50%; /* Prend toute la largeur disponible */
+    height: auto; /* Maintient le ratio de l'image */
+    object-fit: cover; /* Couvre l'espace sans déformer l'image */
+    border-radius: 8px; /* Coins arrondis */
+    margin-top: 10px; /* Espacement entre l'image et le texte */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesListeproduits.css') }}">
+</head>
+<body>
+    {{ nav_bar()|safe }}
+    <div class="produit-container">
+        <h1>Produits récupérés depuis l'API</h1>
+        <ul class="produit-liste">
+            {% for product in products %}
+                <li>
+                    <h2>{{ product.designation }}</h2>
+                    <p>Description : {{ product.descriptif }}</p>
+                    <img src="{{ product.image }}" alt="{{ product.designation }}" class="produit-image">
+                    <p>Prix : {{ product.prix_unitaire_HT }} €</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

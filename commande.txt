@@ -2,3 +2,5 @@ lancer le serveur python
 python app.py
 voir les packages installés
 pip freeze
+commande pour exécuter les fichiers test
+pytest
