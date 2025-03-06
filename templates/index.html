@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste des Villes</title>
+    <link rel="stylesheet" href="/static/stylesCours.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Liste des communes</h1>
+    </header>
+    <main class="container">
+      <section>
+        <ul>
+          {% for commune in communes %}
+          <li>
+            {{ commune.nom_commune if commune.nom_commune else 'Nom inconnu' }}
+          </li>
+          {% else %}
+          <li>Aucune commune trouvée.</li>
+          {% endfor %}
+        </ul>
+
+        <h1>Liste des Villes</h1>
+        <ul>
+            {% for ville in villes %}
+                <li>{{ ville.nom_commune }} - Population: {{ ville.population_municipale }}</li>
+            {% else %}
+                <li>Aucune ville trouvée.</li>
+            {% endfor %}
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Votre Application</p>
+    </footer>
+  </body>
+</html>

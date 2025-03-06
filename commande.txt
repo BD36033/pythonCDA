@@ -4,3 +4,5 @@ voir les packages installés
 pip freeze
 commande pour exécuter les fichiers test
 pytest
+démarrer l'applcication fast applcication
+uvicorn main:app --reload
